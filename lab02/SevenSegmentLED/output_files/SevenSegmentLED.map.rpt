@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SevenSegmentLED
-Mon Sep 11 13:07:24 2023
+Mon Sep 11 15:15:35 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 11 13:07:24 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 11 15:15:35 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; SevenSegmentLED                             ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 20                                          ;
+; Total pins                      ; 22                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -166,49 +166,52 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v             ;         ;
+; SevenSegmentLED.v                ; yes             ; User Verilog HDL File  ; C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/SevenSegmentLED.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimate of Logic utilization (ALMs needed) ; 1      ;
-;                                             ;        ;
-; Combinational ALUT usage for logic          ; 1      ;
-;     -- 7 input functions                    ; 0      ;
-;     -- 6 input functions                    ; 0      ;
-;     -- 5 input functions                    ; 0      ;
-;     -- 4 input functions                    ; 0      ;
-;     -- <=3 input functions                  ; 1      ;
-;                                             ;        ;
-; Dedicated logic registers                   ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 20     ;
-;                                             ;        ;
-; Total DSP Blocks                            ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; LEDR~0 ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 24     ;
-; Average fan-out                             ; 0.59   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 7           ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 14          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 0           ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 14          ;
+;     -- <=3 input functions                  ; 0           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 22          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[0]~input ;
+; Maximum fan-out                             ; 7           ;
+; Total fan-out                               ; 92          ;
+; Average fan-out                             ; 1.59        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |top                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |top                ; top         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+; |top                       ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 22   ; 0            ; |top                   ; top         ; work         ;
+;    |hexdecoder:comb_3|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|hexdecoder:comb_3 ; hexdecoder  ; work         ;
+;    |hexdecoder:comb_4|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|hexdecoder:comb_4 ; hexdecoder  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -232,14 +235,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-; boundary_port         ; 20                          ;
+; arriav_lcell_comb     ; 16                          ;
+;     normal            ; 16                          ;
+;         1 data inputs ; 2                           ;
+;         4 data inputs ; 14                          ;
+; boundary_port         ; 22                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.80                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -258,43 +261,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 11 13:07:11 2023
+    Info: Processing started: Mon Sep 11 15:15:22 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SevenSegmentLED -c SevenSegmentLED
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentled.v
+    Info (12023): Found entity 1: hexdecoder File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/SevenSegmentLED.v Line: 2
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(10): instance has no name File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(11): instance has no name File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 11
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10034): Output port "LEDR[9..1]" at top.v(6) has no driver File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 6
+Info (12128): Elaborating entity "hexdecoder" for hierarchy "hexdecoder:comb_3" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 10
 Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/noah/Desktop/ECE473/lab02/SevenSegmentLED/top.v Line: 5
-Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Mon Sep 11 13:07:24 2023
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 14 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Mon Sep 11 15:15:35 2023
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 

@@ -1,25 +1,14 @@
 //file top.v
 //The output of the LED will be 1 if and only if two or more of the dip switches are 1
 
-module top(
-		input wire[9:0] SW,
-		output reg[9:0] LEDR);
+module top( SW, HEX0, HEX1 );
+
+		input wire[7:0] SW;		//Dip Switches
+		output wire[6:0] HEX0;	//Display 0 7 Seg
+		output wire[6:0] HEX1;	//Display 1 7 Seg
 		
-		always @* begin
-				if(SW[0] == 1'b1 && SW[1] == 1'b1) begin
-					LEDR[0] = 1'b1;
-					
-				end else if (SW[0] == 1'b1 && SW[2] == 1'b1) begin
-					LEDR[0] = 1'b1;
-					
-				end else if (SW[1] == 1'b1 && SW[2] == 1'b1) begin
-					LEDR[0] = 1'b1;
-					
-				end else begin
-						LEDR[0] = 1'b0; //Sets the default value to 0
-						
-				end
-		end
+		hexdecoder (SW[3:0], HEX0); //Displays the value of dips 3-0
+		hexdecoder (SW[7:4], HEX1); //Displays the value of dips 7-4
 		
-	endmodule
+endmodule
 	

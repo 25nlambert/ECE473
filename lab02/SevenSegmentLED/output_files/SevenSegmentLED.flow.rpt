@@ -1,5 +1,5 @@
 Flow report for SevenSegmentLED
-Mon Sep 11 13:08:04 2023
+Mon Sep 11 15:16:08 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Sep 11 13:07:57 2023       ;
+; Flow Status                     ; Successful - Mon Sep 11 15:16:01 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; SevenSegmentLED                             ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 18,480 ( < 1 % )                        ;
+; Logic utilization (in ALMs)     ; 8 / 18,480 ( < 1 % )                        ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 20 / 224 ( 9 % )                            ;
+; Total pins                      ; 22 / 224 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/11/2023 13:07:11 ;
+; Start date & time ; 09/11/2023 15:15:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SevenSegmentLED     ;
 +-------------------+---------------------+
@@ -79,11 +79,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-----------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+-----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1099447343334.169445203108724          ; --              ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1099447343334.169445972303604          ; --              ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; DE0_CV      ; Top        ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; top         ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; DE0_CV      ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; top         ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; DE0_CV      ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; top         ; Top        ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; top                                    ; SevenSegmentLED ; --          ; --         ;
@@ -95,11 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4805 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:25     ; 1.0                     ; 6190 MB             ; 00:00:32                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4822 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5034 MB             ; 00:00:05                           ;
-; Total                ; 00:00:48     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4799 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:20     ; 1.0                     ; 6232 MB             ; 00:00:30                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4819 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5058 MB             ; 00:00:06                           ;
+; Total                ; 00:00:43     ; --                      ; --                  ; 00:01:07                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
